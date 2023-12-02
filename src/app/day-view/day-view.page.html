@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>day-view {{ currentDate | date:'longDate'}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">day-view</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <form [formGroup]="mealForm">
+    <ion-list>
+      <ion-item>
+        <ion-label [position]="'stacked'">Breakfast</ion-label>
+        <ion-input
+          formControlName="breakfast"
+          [type]="'number'"
+          placeholder="0"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label [position]="'stacked'">Lunch</ion-label>
+        <ion-input
+          formControlName="lunch"
+          [type]="'number'"
+          placeholder="0"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label [position]="'stacked'">Dinner</ion-label>
+        <ion-input
+          formControlName="dinner"
+          [type]="'number'"
+          placeholder="0"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label [position]="'stacked'">Snack</ion-label>
+        <ion-input
+          formControlName="snack"
+          [type]="'number'"
+          placeholder="0"
+        ></ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
