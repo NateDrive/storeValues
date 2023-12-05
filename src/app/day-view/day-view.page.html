@@ -4,6 +4,9 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>day-view {{ currentDate | date:'longDate'}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="saveMeal()">Save</ion-button>
+    </ion-buttons>  
   </ion-toolbar>
 </ion-header>
 
